@@ -22,8 +22,11 @@ function init(){}
 function render(){}
 
 function handleClick(){
-console.log(rollDice())
-rollDice()
+
+
+for (let i=1; i < 6; i++) console.log(rollDice(i));
+
+
 }
 function rollDice(min, max){
   //generate a random number between one and //six inclusive
