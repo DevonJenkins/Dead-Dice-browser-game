@@ -22,8 +22,14 @@ function init(){}
 function render(){}
 
 function handleClick(){
-console.log('youve been clicked')
+console.log(rollDice())
+rollDice()
+}
+function rollDice(min, max){
+  //generate a random number between one and //six inclusive
+  min = Math.ceil(1);
+  max = Math.floor(6);
+ return Math.floor(Math.random() * (6 - min + 1)+1);
 
 }
-function rollDice(){}
 function getWinner(){}
