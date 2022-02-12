@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-const dice = [1,2,3,4,5,6]
+const diceInPlay = []
 const discardedDice = []
 
 
@@ -16,15 +16,31 @@ rollBtn = document.querySelector('#roll-dice')
 rollBtn.addEventListener('click', handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
-function init(){}
+init()
 
+function init(){
+  dice = []
+  score = 0
+  currentPlayer = 1
+}
 
-function render(){}
 
 function handleClick(){
 
+//if i is less than the length of the dice in play arr plus 1 then iterate. use six as a placeholder value to represent the five dice being rolled at the beginning of the game
 
-for (let i=1; i < 6; i++) console.log(rollDice(i));
+//this clears out the dice array on button click 
+ let diceInPlay =[]
+
+//generates a number five times to represent five dice being rolled
+ for (let i=1; i < 6; i++) diceInPlay.push(rollDice(i))
+
+
+ //for each item in the array, if it = five or two, then push it to9 the discarded dice array.
+// if(rollDice(i) === 2 || rollDice(i) === 5){discardedDice.push(rollDice(i))}
+ 
+ console.log(diceInPlay)
+console.log(discardedDice)
 
 
 }
@@ -32,7 +48,24 @@ function rollDice(min, max){
   //generate a random number between one and //six inclusive
   min = Math.ceil(1);
   max = Math.floor(6);
- return Math.floor(Math.random() * (6 - min + 1)+1);
-
+  
+   return Math.floor(Math.random() * (6 - min + 1)+1);
+  
+ 
 }
-function getWinner(){}
+
+function countScore(){
+  //total up the numbers in the remaining dice array on every move
+  //add that total to the current players score on every move
+}
+
+function endGame(){
+  //end game if both players discardedDice array length = 5
+  //once the game is over, invoke the get rinner function
+}
+
+
+function getWinner(){
+  //compare the two players scores to find out the winner.
+  //render winner message to the gameStatus message field
+}
