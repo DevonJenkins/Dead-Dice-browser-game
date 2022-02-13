@@ -1,6 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
-const diceInPlay = []
-const discardedDice = []
+let diceInPlay = []
+let discardedDice = []
 
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -19,7 +19,8 @@ rollBtn.addEventListener('click', handleClick)
 init()
 
 function init(){
-  dice = []
+  diceInPlay = [5,5,5,5,5]
+  discardedDice = []
   score = 0
   currentPlayer = 1
 }
@@ -33,11 +34,23 @@ function handleClick(){
  let diceInPlay =[]
 
 //generates a number five times to represent five dice being rolled
- for (let i=1; i < 6; i++) diceInPlay.push(rollDice(i))
+ //for (let i=1; i < 6; i++) diceInPlay.push(rollDice(i))
+
+ console.log(diceInPlay.length)
+ console.log(discardedDice.length)
+
+
+ for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
 
 
  //for each item in the array, if it = five or two, then push it to9 the discarded dice array.
 // if(rollDice(i) === 2 || rollDice(i) === 5){discardedDice.push(rollDice(i))}
+//dice.forEach(el, idx){   }
+
+
+diceInPlay.forEach(function(die){
+  if(die === 2 || die === 5 ){ discardedDice.push(die) }
+})
  
  console.log(diceInPlay)
 console.log(discardedDice)
