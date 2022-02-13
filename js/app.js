@@ -18,6 +18,7 @@ rollBtn.addEventListener('click', handleClick)
 /*-------------------------------- Functions --------------------------------*/
 init()
 
+
 function init(){
   diceInPlay = [5,5,5,5,5]
   discardedDice = []
@@ -28,6 +29,8 @@ function init(){
 
 function handleClick(){
 
+  console.log('current plauer:', currentPlayer)
+  console.log('discarded dice length:', discardedDice.length)
 //if i is less than the length of the dice in play arr plus 1 then iterate. use six as a placeholder value to represent the five dice being rolled at the beginning of the game
 
 //this clears out the dice array on button click 
@@ -36,9 +39,9 @@ function handleClick(){
 //generates a number five times to represent five dice being rolled
  //for (let i=1; i < 6; i++) diceInPlay.push(rollDice(i))
 
- console.log(diceInPlay.length)
- console.log(discardedDice.length)
 
+
+ 
 
  for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
 
@@ -50,13 +53,17 @@ function handleClick(){
 
 diceInPlay.forEach(function(die){
   if(die === 2 || die === 5 ){ discardedDice.push(die) }
+  
+
 })
  
- console.log(diceInPlay)
-console.log(discardedDice)
+ console.log('diceInPlay:', diceInPlay)
+console.log('discardedDice',discardedDice)
 
+handleTurn()
 
 }
+
 function rollDice(min, max){
   //generate a random number between one and //six inclusive
   min = Math.ceil(1);
@@ -67,6 +74,14 @@ function rollDice(min, max){
  
 }
 
+function handleTurn(){
+  if  (discardedDice.length === 5){
+    currentPlayer === -1
+  }
+//there's a problem here
+}
+
+
 function countScore(){
   //total up the numbers in the remaining dice array on every move
   //add that total to the current players score on every move
@@ -75,6 +90,10 @@ function countScore(){
 function endGame(){
   //end game if both players discardedDice array length = 5
   //once the game is over, invoke the get rinner function
+
+  if ( (turn === 2) && discardedDice.length ===5){
+    ///render game over message 
+  }
 }
 
 
