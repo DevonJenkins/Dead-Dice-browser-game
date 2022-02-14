@@ -38,13 +38,19 @@ function handleClick(){
 ////this for loop appears to mess with my turn handler. Where else could i put this? 
   for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
 
+  currentPlayerScore = diceInPlay.reduce( function(a, b){ return a += b},0 )
+  
+  console.log(currentPlayerScore) 
+
+
   diceInPlay.forEach(function(die){
-  if(die == 2 || die == 5 ){ discardedDice.push(die) }
+  if(die == 2 || die == 5 ){ discardedDice.push(die) }//else get pushed into a dice left array. 
     })
   console.log('dice in play:', diceInPlay)
+
   
   handleTurn()
-  countScore()
+  
 }
 
 
@@ -57,16 +63,14 @@ function rollDice(min, max){
 }
 
 function handleTurn(){
-    //if button press is true & discarded dice length is 5 and current player is 1, then current player is switched to -1 
-
   if  ((discardedDice.length == 5)&&(currentPlayer == 1))
   {(currentPlayer = -1) && playerInit()}
-
   //if current player is -1 then clear out discarded dice array 
 
-  console.log('current plauer:', currentPlayer)
-  console.log('discardedDice',discardedDice)
-  console.log('discarded dice length:', discardedDice.length)
+  // console.log('current plauer:', currentPlayer)
+  // console.log('discardedDice',discardedDice)
+  // console.log('discarded dice length:', discardedDice.length)
+  
   
    
   endGame()
@@ -85,11 +89,13 @@ function countScore(){
   // currentPlayerScore = diceInPlay.reduce( function(a, b){
   // return a + b
   // },0 )
+  
+  //currentscore will be based on dice left array 
 
-console.log('dice in play sum:', diceInPlay.reduce( function(a, b){ return a += b},0 ))
-console.log('discarded dice sum:', discardedDice.reduce( function(a, b){ return a += b},0 ))
-
-
+  //return 'dice in play sum:', diceInPlay.reduce( function(a, b){ return a += b},0 )
+      //replace diceInPlay with diceLeft 
+  //console.log('discarded dice sum:', discardedDice.reduce( function(a, b){ return a += b},0 ))
+  
 }
 
 function endGame(){
