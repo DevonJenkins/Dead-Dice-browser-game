@@ -20,7 +20,7 @@ init()
 
 
 function init(){
-  diceInPlay = [5,5,5,5,5]
+  diceInPlay = []
   discardedDice = []
   score = 0
   currentPlayer = 1
@@ -29,11 +29,13 @@ function init(){
 
 function handleClick(){
 
-  console.log('current plauer:', currentPlayer)
-  console.log('discarded dice length:', discardedDice.length)
+
+
+  
+  
 //if i is less than the length of the dice in play arr plus 1 then iterate. use six as a placeholder value to represent the five dice being rolled at the beginning of the game
 
-//this clears out the dice array on button click 
+//this clears out the diceInPlay array on button click 
  let diceInPlay =[]
 
 //generates a number five times to represent five dice being rolled
@@ -52,15 +54,14 @@ function handleClick(){
 
 
 diceInPlay.forEach(function(die){
-  if(die === 2 || die === 5 ){ discardedDice.push(die) }
-  
-
-})
+  if(die == 2 || die == 5 ){ discardedDice.push(die) }
+    })
  
- console.log('diceInPlay:', diceInPlay)
-console.log('discardedDice',discardedDice)
 
-handleTurn()
+  console.log('dice in play:', diceInPlay)
+
+
+  handleTurn()
 
 }
 
@@ -75,10 +76,22 @@ function rollDice(min, max){
 }
 
 function handleTurn(){
-  if  (discardedDice.length === 5){
-    currentPlayer === -1
-  }
-//there's a problem here
+    //if button press is true & discarded dice length is 5 and current player is 1, then current player is switched to -1 
+
+  if  ((discardedDice.length == 5)&&(currentPlayer == 1))
+  {(currentPlayer = -1)&&(playerInit())}
+
+
+
+  console.log('current plauer:', currentPlayer)
+  console.log('discardedDice',discardedDice)
+  console.log('discarded dice length:', discardedDice.length)
+  
+}
+
+function playerInit(){
+  let discardedDice = []
+  //this function will clear out the discarded dice array
 }
 
 
@@ -91,13 +104,16 @@ function endGame(){
   //end game if both players discardedDice array length = 5
   //once the game is over, invoke the get rinner function
 
-  if ( (turn === 2) && discardedDice.length ===5){
-    ///render game over message 
+  if ( (turn == -1) && discardedDice.length ==5){
+    console.log('gameover')
+    getWinner()
   }
 }
 
 
 function getWinner(){
+  console.log('winner is smelly')
+  init()
   //compare the two players scores to find out the winner.
   //render winner message to the gameStatus message field
 }
