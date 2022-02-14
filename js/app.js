@@ -19,6 +19,7 @@ rollBtn.addEventListener('click', handleClick)
 init()
 
 
+
 function init(){
   diceInPlay = []
   discardedDice = []
@@ -30,27 +31,14 @@ function init(){
 function handleClick(){
 
 
-
-  
-  
-//if i is less than the length of the dice in play arr plus 1 then iterate. use six as a placeholder value to represent the five dice being rolled at the beginning of the game
-
 //this clears out the diceInPlay array on button click 
  let diceInPlay =[]
-
-//generates a number five times to represent five dice being rolled
- //for (let i=1; i < 6; i++) diceInPlay.push(rollDice(i))
-
-
-
  
+//this for loop appears to mess with my turn handler. Where else could i put this? 
 
  for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
 
-
- //for each item in the array, if it = five or two, then push it to9 the discarded dice array.
-// if(rollDice(i) === 2 || rollDice(i) === 5){discardedDice.push(rollDice(i))}
-//dice.forEach(el, idx){   }
+ 
 
 
 diceInPlay.forEach(function(die){
@@ -79,19 +67,24 @@ function handleTurn(){
     //if button press is true & discarded dice length is 5 and current player is 1, then current player is switched to -1 
 
   if  ((discardedDice.length == 5)&&(currentPlayer == 1))
-  {(currentPlayer = -1)&&(playerInit())}
+  {(currentPlayer = -1) && playerInit()}
 
-
+  //if current player is -1 then clear out discarded dice array 
 
   console.log('current plauer:', currentPlayer)
   console.log('discardedDice',discardedDice)
   console.log('discarded dice length:', discardedDice.length)
-  
+
+  endGame()
 }
 
 function playerInit(){
-  let discardedDice = []
-  //this function will clear out the discarded dice array
+    diceInPlay = []
+    discardedDice = [] 
+    discardedDice.length == 0
+
+  // diceInPlay.length == 5
+  //this function should clear out the discarded dice array and set the diceinplay length back to 5
 }
 
 
@@ -104,7 +97,7 @@ function endGame(){
   //end game if both players discardedDice array length = 5
   //once the game is over, invoke the get rinner function
 
-  if ( (turn == -1) && discardedDice.length ==5){
+  if ( (currentPlayer == -1) && discardedDice.length ==5){
     console.log('gameover')
     getWinner()
   }
