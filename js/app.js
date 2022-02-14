@@ -37,26 +37,26 @@ function init(){
 function handleClick(){
 
   let diceInPlay =[] 
-  let diceKept = [] 
-
-////this for loop appears to mess with my turn handler. Where else could i put this? 
-  for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
 
   
 
+  for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
+
+
+
   diceInPlay.forEach(function(die){
-  if(die == 2 || die == 5 ){ discardedDice.push(die) 
-  }else diceKept.push(die) 
+    if(die == 2 || die == 5 ){ discardedDice.push(die) 
+    }else{ diceKept.push(die)} 
     })
 
 
   console.log('dice in play:', diceInPlay)
-  console.log('diceKept:', diceKept)
-  console.log('discardedDice:', discardedDice)
-
-  countScore()
-  handleTurn()
   
+  
+
+  
+  handleTurn()
+  countScore()
 }
 
 
@@ -74,18 +74,14 @@ function handleTurn(){
   //if current player is -1 then clear out discarded dice array 
 
   // console.log('current plauer:', currentPlayer)
-  // console.log('discardedDice',discardedDice)
-  // console.log('discarded dice length:', discardedDice.length)
   
-  
-   
   endGame()
 }
 
 function playerInit(){
     diceInPlay = []
     discardedDice = [] 
-    discardedDice.length == 0
+
 }
 
 
@@ -93,19 +89,19 @@ function countScore(){
   
 
   diceKeptSum = diceKept.reduce( function(a, b){ return a += b},0 )
-  
+  console.log('diceKept:', diceKept)
   console.log('diceKeptSum', diceKeptSum)
 
   discardedDiceSum = discardedDice.reduce( function(a, b){ return a += b},0 )
   
+  console.log('discardedDice:', discardedDice)
   console.log('discardedDice sum:', discardedDiceSum)
-
   
 }
 
 function endGame(){
   //end game if both players discardedDice array length = 5
-  //once the game is over, invoke the get rinner function
+  //once the game is over, invoke the get winner function
   if ( (currentPlayer == -1) && discardedDice.length ==5){
     console.log('gameover')
     console.log('Player 1 score:', playerOneScore)
