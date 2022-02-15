@@ -13,7 +13,12 @@ let playerTwoScore = null
 /*------------------------ Cached Element References ------------------------*/
 
 rollBtn = document.querySelector('#roll-dice')
-statusMessage = document.querySelector('#status-message')
+statusMessage = document.querySelector('.status-message')
+d1 = document.querySelector('#d1')
+d2 = document.querySelector('#d2')
+d3 = document.querySelector('#d3')
+d4 = document.querySelector('#d4')
+d5 = document.querySelector('#d5')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -21,7 +26,7 @@ rollBtn.addEventListener('click', handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 init()
-
+render()
 
 
 function init(){
@@ -30,14 +35,14 @@ function init(){
   discardedDice = []
   currentPlayer = 1
   currentPlayerScore = null
-  playerOneScore = null
-  playerTwoScore = null
+  playerOneScore = 0
+  playerTwoScore = 0
 }
 
 
 function handleClick(){
 
-  let diceInPlay =[] 
+diceInPlay = []
 
   
 
@@ -51,13 +56,15 @@ function handleClick(){
     })
 
 
-  //console.log('dice in play:', diceInPlay)
+  
+  
   
   
 
-  
+    render()
   handleTurn()
   countScore()
+
 }
 
 
@@ -72,9 +79,11 @@ function rollDice(min, max){
 function handleTurn(){
   if  ((discardedDice.length == 5)&&(currentPlayer == 1))
   {(currentPlayer = -1) && playerInit()}
+
   
   endGame()
 }
+
 
 function playerInit(){
     diceInPlay = []
@@ -82,6 +91,7 @@ function playerInit(){
     diceKept = []
     currentPlayerScore = []
 }
+
 
 
 function countScore(){
@@ -133,10 +143,40 @@ function endGame(){
 
 function getWinner(){
 
-if(playerOneScore > playerTwoScore){console.log('player 1 wins!')
-}else if( playerTwoScore> playerOneScore){console.log('player 2 wins')
-}else if (playerOneScore == playerTwoScore){console.log('its a tie mufk')}
+if(playerOneScore > playerTwoScore){statusMessage.textContent = 'player 2 wins'
+}else if( playerTwoScore> playerOneScore){statusMessage.textContent = 'player 2 wins'
+}else if (playerOneScore == playerTwoScore){statusMessage.textContent = 'its a tie sonny'}
 
   init()
   
+}
+
+
+function render(){
+  if (currentPlayer == 1){
+    statusMessage.textContent = 'player 1 roll'
+}else if (currentPlayer == -1){
+  statusMessage.textContent = 'player 2 roll'
+}
+  
+  d1.textContent = diceInPlay[(diceInPlay.length-4)]
+  d2.textContent = diceInPlay[(diceInPlay.length-3)]
+  d3.textContent = diceInPlay[(diceInPlay.length-2)]
+  d4.textContent = diceInPlay[(diceInPlay.length-1)]
+  d5.textContent = diceInPlay[(diceInPlay.length)]
+
+
+
+  console.log('dice in play:', diceInPlay)
+
+
+
+  //this method almost works but i'm better off using dice in play if i can get it to work
+  // d2.textContent = diceKept[(diceKept.length-3)]
+  // d3.textContent = diceKept[(diceKept.length-2)]
+  // d4.textContent = diceKept[(diceKept.length-1)]
+  // d5.textContent = diceKept[(diceKept.length)]
+
+  
+
 }

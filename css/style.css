@@ -5,6 +5,7 @@ body{
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 ul{
@@ -15,5 +16,4 @@ button{
 
   max-width: fit-content;
   
-
 }
