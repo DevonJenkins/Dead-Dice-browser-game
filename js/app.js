@@ -7,7 +7,7 @@ let diceInPlay = []
 let diceKept = [] 
 let discardedDice = []
 let currentPlayer = null
-let score = null 
+let currentPlayerScore = null 
 let playerOneScore = null
 let playerTwoScore = null
 /*------------------------ Cached Element References ------------------------*/
@@ -28,9 +28,9 @@ function init(){
   diceKept = []
   discardedDice = []
   currentPlayer = 1
-  currentPlayerScore = 0
-  playerOneScore = 0
-  playerTwoScore = 0
+  currentPlayerScore = null
+  playerOneScore = null
+  playerTwoScore = null
 }
 
 
@@ -50,7 +50,7 @@ function handleClick(){
     })
 
 
-  console.log('dice in play:', diceInPlay)
+  //console.log('dice in play:', diceInPlay)
   
   
 
@@ -71,9 +71,6 @@ function rollDice(min, max){
 function handleTurn(){
   if  ((discardedDice.length == 5)&&(currentPlayer == 1))
   {(currentPlayer = -1) && playerInit()}
-  //if current player is -1 then clear out discarded dice array 
-
-  // console.log('current plauer:', currentPlayer)
   
   endGame()
 }
@@ -81,7 +78,8 @@ function handleTurn(){
 function playerInit(){
     diceInPlay = []
     discardedDice = [] 
-
+    diceKept = []
+    currentPlayerScore = []
 }
 
 
@@ -89,32 +87,55 @@ function countScore(){
   
 
   diceKeptSum = diceKept.reduce( function(a, b){ return a += b},0 )
+
   console.log('diceKept:', diceKept)
-  console.log('diceKeptSum', diceKeptSum)
+   console.log('diceKeptSum', diceKeptSum)
 
   discardedDiceSum = discardedDice.reduce( function(a, b){ return a += b},0 )
   
-  console.log('discardedDice:', discardedDice)
-  console.log('discardedDice sum:', discardedDiceSum)
+  // console.log('discardedDice:', discardedDice)
+  // console.log('discardedDice sum:', discardedDiceSum)
+
+
+  
+  let currentPlayerScore = diceKeptSum
+
+  
+  if (currentPlayer == 1){playerOneScore = diceKeptSum
+  }else if (currentPlayer == -1){
+    playerTwoScore = diceKeptSum
+    
+  }
+
+  
+  console.log('current Player score:', diceKeptSum)
+
+  console.log('Player 1 score:', playerOneScore)
+
+
+  console.log('Player 2 score:', playerTwoScore)
+
   
 }
 
 function endGame(){
-  //end game if both players discardedDice array length = 5
-  //once the game is over, invoke the get winner function
+  
   if ( (currentPlayer == -1) && discardedDice.length ==5){
-    console.log('gameover')
+    console.log('The game has ended')
     console.log('Player 1 score:', playerOneScore)
     console.log('Player 2 score:', playerTwoScore)
     getWinner()
   }
+
 }
 
 
 function getWinner(){
-  console.log('winner is smelly')
+
+if(playerOneScore > playerTwoScore){console.log('player 1 wins!')
+}else if( playerTwoScore> playerOneScore){console.log('player 2 wins')
+}else if (playerOneScore == playerTwoScore){console.log('its a tie mufk')}
 
   init()
-  //compare the two players scores to find out the winner.
-  //render winner message to the gameStatus message field
+  
 }
