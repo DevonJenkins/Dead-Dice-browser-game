@@ -14,11 +14,17 @@ let playerTwoScore = null
 
 rollBtn = document.querySelector('#roll-dice')
 statusMessage = document.querySelector('.status-message')
+p1ScoreDisplay = document.querySelector('#player-one-score')
+p2ScoreDisplay = document.querySelector('#player-two-score')
+
+
+
 d1 = document.querySelector('#d1')
 d2 = document.querySelector('#d2')
 d3 = document.querySelector('#d3')
 d4 = document.querySelector('#d4')
 d5 = document.querySelector('#d5')
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -164,6 +170,9 @@ function render(){
   d3.textContent = diceInPlay[(diceInPlay.length-2)]
   d4.textContent = diceInPlay[(diceInPlay.length-1)]
   d5.textContent = diceInPlay[(diceInPlay.length)]
+
+  p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
+  p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
 
 
 
