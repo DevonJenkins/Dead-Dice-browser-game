@@ -1,4 +1,19 @@
 body{
   color: white;
   background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+ul{
+  list-style: none ;
+}
+
+button{
+
+  max-width: fit-content;
+  
+
 }

@@ -13,6 +13,7 @@ let playerTwoScore = null
 /*------------------------ Cached Element References ------------------------*/
 
 rollBtn = document.querySelector('#roll-dice')
+statusMessage = document.querySelector('#status-message')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
