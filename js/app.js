@@ -149,7 +149,7 @@ function endGame(){
 
 function getWinner(){
 
-if(playerOneScore > playerTwoScore){statusMessage.textContent = 'player 2 wins'
+if(playerOneScore > playerTwoScore){statusMessage.textContent = 'player 1 wins'
 }else if( playerTwoScore> playerOneScore){statusMessage.textContent = 'player 2 wins'
 }else if (playerOneScore == playerTwoScore){statusMessage.textContent = 'its a tie sonny'}
 
