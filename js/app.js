@@ -71,6 +71,7 @@ diceInPlay = [0,0,0,0,0]
     render()
   handleTurn()
   countScore()
+  pipRender()
 
 }
 
@@ -160,6 +161,18 @@ function render(){
   p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
 
-  discardedDiceDisplay.textContent =  discardedDice
+  discardedDiceDisplay.textContent =  discardedDice.length
 
+}
+
+function pipRender(){
+if (d1.textContent == 1){
+  d1.style.color = red
+}
+   
+}
+
+
+function buttonChange(){
+//on gameover, change the roll button to a reset button 
 }
