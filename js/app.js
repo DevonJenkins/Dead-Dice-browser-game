@@ -3,7 +3,7 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let diceInPlay = []
+let diceInPlay = [0,0,0,0,0]
 let diceKept = [] 
 let discardedDice = []
 let currentPlayer = null
@@ -38,7 +38,7 @@ render()
 
 
 function init(){
-  diceInPlay = []
+  diceInPlay = [0,0,0,0,0]
   diceKept = []
   discardedDice = []
   currentPlayer = 1
