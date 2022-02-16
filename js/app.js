@@ -42,7 +42,6 @@ function init(){
   diceKept = []
   discardedDice = []
   currentPlayer = 1
-  currentPlayerScore = null
   playerOneScore = 0
   playerTwoScore = 0
 }
@@ -76,8 +75,7 @@ diceInPlay = [0,0,0,0,0]
 }
 
 
-function rollDice(min, max){
-  //generate a random number between one and //six inclusive
+function rollDice(min, max){  
   min = Math.ceil(1);
   max = Math.floor(6);
   
@@ -97,7 +95,7 @@ function playerInit(){
     diceInPlay = []
     discardedDice = [] 
     diceKept = []
-    currentPlayerScore = []
+
 }
 
 
@@ -112,7 +110,7 @@ function countScore(){
   
 
   
-  let currentPlayerScore = diceKeptSum
+
 
   
   if (currentPlayer == 1){playerOneScore = diceKeptSum
@@ -136,9 +134,9 @@ function endGame(){
 
 function getWinner(){
 
-if(playerOneScore > playerTwoScore){statusMessage.textContent = 'player 1 wins'
-}else if( playerTwoScore> playerOneScore){statusMessage.textContent = 'player 2 wins'
-}else if (playerOneScore == playerTwoScore){statusMessage.textContent = 'its a tie sonny'}
+  if(playerOneScore > playerTwoScore){statusMessage.textContent = 'player 1 wins'
+  }else if( playerTwoScore> playerOneScore){statusMessage.textContent = 'player 2 wins'
+  }else if (playerOneScore == playerTwoScore){statusMessage.textContent = 'its a tie sonny'}
 
   init()
   
@@ -162,6 +160,6 @@ function render(){
   p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
 
-  discardedDiceDisplay.textContent = 'discarded dice: ' + discardedDice
+  discardedDiceDisplay.textContent =  discardedDice
 
 }
