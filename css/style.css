@@ -2,34 +2,79 @@ body{
   color: white;
   background: rgb(31, 88, 4);
   display: grid;
-  grid-area: 20% 80%;
-
-  text-align: center;
-  min-height: 100vh;
+  grid-template-columns:  30% 70%; 
+  grid-template-rows: 30% 30% 30%;
+  grid-template-areas:"scoreboard title "
+                      " scoreboard status-message-container"
+                       "discarded-dice-container dice-container" ;
+  /* text-align: center;
+  min-height: 100vh; */
 }
 
 ul{
   list-style: none ;
 }
-
+.title{
+  grid-area: title;
+  background: yellow;
+  color: green;
+}
+.status-message-container{
+  grid-area: status-message-container;
+  background: yellow;
+  color: green;
+}
 .scoreboard{
+  grid-area: scoreboard;
   color: yellow;
   text-align: left;
   background: red;
-  max-width:20%; 
+  max-width:100%; 
 }
 .dice-container{
-  background: black;
-  max-width: 20%;
-  display: flex;
-  justify-content: center;
+  grid-area: dice-container;
+color:yellow;
+background: red;
+  max-width: 100%;
+  max-height: 100%; 
 
 }
+
 #d1{
-  background:red;
+  background: green;
   padding: 5px; 
+  max-width: fit-content;
 
 }
+#d2{
+  background: green;
+  padding: 5px; 
+  max-width: fit-content;
+
+}
+#d3{
+  background: green;
+  padding: 5px; 
+  max-width: fit-content;
+
+}
+#d4{
+  background: green;
+  padding: 5px; 
+  max-width: fit-content;
+
+}
+#d5{
+  background: green;
+  padding: 5px; 
+  max-width: fit-content;
+
+}
+
+
+
+
+
 
 button{
   border: red solid 3px;
@@ -45,4 +90,9 @@ margin: 0 auto;
 button:hover{
   background: orange;
   color: blue;
+}
+.discarded-dice-container{
+  grid-area: discarded-dice-container;
+  background: yellow;
+  color: green;
 }
