@@ -48,11 +48,11 @@ function init(){
 
 function handleClick(){
 
-diceInPlay = []
+diceInPlay = [0,0,0,0,0]
 
   
 
-  for (let i=1; i <= (5 - discardedDice.length); i++) diceInPlay.push(rollDice(i))
+  for (let i=1; i <= (5 - (discardedDice.length)); i++) diceInPlay.push(rollDice(i))
 
 
 
@@ -165,12 +165,13 @@ function render(){
   statusMessage.textContent = 'player 2 roll'
 }
   
-  d1.textContent = diceInPlay[(diceInPlay.length-4)]
-  d2.textContent = diceInPlay[(diceInPlay.length-3)]
-  d3.textContent = diceInPlay[(diceInPlay.length-2)]
-  d4.textContent = diceInPlay[(diceInPlay.length-1)]
-  d5.textContent = diceInPlay[(diceInPlay.length)]
-
+  d1.textContent = diceInPlay[(diceInPlay.length - 5)]
+  d2.textContent = diceInPlay[(diceInPlay.length - 4)]
+  d3.textContent = diceInPlay[(diceInPlay.length - 3)]
+  d4.textContent = diceInPlay[(diceInPlay.length - 2)]
+  d5.textContent = diceInPlay[(diceInPlay.length - 1)]
+  
+  
   p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
 
@@ -179,12 +180,6 @@ function render(){
   console.log('dice in play:', diceInPlay)
 
 
-
-  //this method almost works but i'm better off using dice in play if i can get it to work
-  // d2.textContent = diceKept[(diceKept.length-3)]
-  // d3.textContent = diceKept[(diceKept.length-2)]
-  // d4.textContent = diceKept[(diceKept.length-1)]
-  // d5.textContent = diceKept[(diceKept.length)]
 
   
 
