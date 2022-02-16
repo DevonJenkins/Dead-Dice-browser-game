@@ -105,14 +105,9 @@ function countScore(){
 
   diceKeptSum = diceKept.reduce( function(a, b){ return a += b},0 )
 
-  console.log('diceKept:', diceKept)
-   console.log('diceKeptSum', diceKeptSum)
 
   discardedDiceSum = discardedDice.reduce( function(a, b){ return a += b},0 )
   
-  // console.log('discardedDice:', discardedDice)
-  // console.log('discardedDice sum:', discardedDiceSum)
-
 
   
   let currentPlayerScore = diceKeptSum
@@ -125,22 +120,12 @@ function countScore(){
   }
 
   
-  console.log('current Player score:', diceKeptSum)
-
-  console.log('Player 1 score:', playerOneScore)
-
-
-  console.log('Player 2 score:', playerTwoScore)
-
-  
 }
 
 function endGame(){
   
   if ( (currentPlayer == -1) && discardedDice.length ==5){
-    console.log('The game has ended')
-    console.log('Player 1 score:', playerOneScore)
-    console.log('Player 2 score:', playerTwoScore)
+    
     getWinner()
   }
 
@@ -174,13 +159,5 @@ function render(){
   
   p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
-
-
-
-  console.log('dice in play:', diceInPlay)
-
-
-
-  
 
 }
