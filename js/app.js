@@ -26,6 +26,8 @@ d4 = document.querySelector('#d4')
 d5 = document.querySelector('#d5')
 
 
+discardedDiceDisplay = document.querySelector('.discarded-dice')
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 rollBtn.addEventListener('click', handleClick)
@@ -159,5 +161,7 @@ function render(){
   
   p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
+
+  discardedDiceDisplay.textContent = 'discarded dice: ' + discardedDice
 
 }
