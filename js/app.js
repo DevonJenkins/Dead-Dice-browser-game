@@ -171,8 +171,8 @@ if (d1.textContent == 1){
 }
    
 }
-
+  
 
 function buttonChange(){
 //on gameover, change the roll button to a reset button 
-}
+}    
