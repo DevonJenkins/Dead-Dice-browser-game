@@ -44,7 +44,7 @@
 ![game prototype image](https://i.imgur.com/cTybl7T.png)
 
 ---
-## **Attributions**
+## **~~Attributions~~**
  ~~no attributions yet. Leaving this field here for use in the future.~~ 
 
 ----
