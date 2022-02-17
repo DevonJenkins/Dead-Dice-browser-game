@@ -65,3 +65,10 @@
   
 - [ ] add wild west theme 
 - [ ] add sounds and music in order to supplement the wild west theme
+- [ ] add old west whistle sound on start up
+- [ ] add gunshot noise on dice roll
+- [ ] use audio to tell player how many dice have been discarded
+- [ ] on end of game, use audio to tell the player who won the game 
+- [ ] use digitone synthesizer and ableton to record a synthy yet western themed looped soundtrack
+- [ ] add button to turn music on and off
+- [ ] add button to turn sound on and off 
