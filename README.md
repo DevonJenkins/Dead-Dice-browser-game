@@ -4,7 +4,7 @@
 
 ### **Objective:**
 
-- Create a browser based game that accurately models a standard game of 'Drop Dead'  
+  Create a browser based game that accurately models a standard game of 'Drop Dead'  
 
 ---
 
@@ -55,11 +55,13 @@
 - [ ] Add timer to dice roll
 - [ ] Add timer to win message
 - [ ] add confetti to win message 
+- [ ] add sound to win message
 
 - [ ] make end of game/winner more apparent
 
 - [ ] Replace the numbers on the dice with pips 
   
-- [ ] make the look like their rolling 
+- [ ] make the dice look like their rolling 
+  
 - [ ] add wild west theme 
 - [ ] add sounds and music in order to supplement the wild west theme
