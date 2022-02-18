@@ -5,11 +5,11 @@ body{
   grid-template-rows: 20% 20% 60%;
   grid-template-areas:"title title "
                       "scoreboard status-message-container"
-                       "discarded-dice-container dice-container" ;
+                      "discarded-dice-container dice-container" ;
   text-align: center;
   min-height: 75vh;
 
-   width: 75%;
+  width: 75%;
   max-height: 75%; 
   margin: 0 auto;
   margin-top: 10vh;
@@ -21,24 +21,41 @@ body{
 ul{
   list-style: none ;
 }
-.title{
+.title-container{
   grid-area: title;
-  background: rgb(113, 6, 39);
+  background: rgb(6, 7, 14);
   color: rgb(234, 196, 53);
   display: flex;
   flex-direction: column;
   border: solid rgb(234, 196, 53);
 }
+.title{
+  background: rgb(234, 196, 53);
+  color:rgb(77, 161, 103);
+  max-width: fit-content;
+  margin: 0 auto;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
 .status-message-container{
   grid-area: status-message-container;
-  background: rgb(113, 6, 39);
+  background: rgb(6, 7, 14);
   color: rgb(234, 196, 53);
   border: solid rgb(234, 196, 53);
   
+  
+}
+.status-message{
+  background: rgb(234, 196, 53);
+  color:rgb(77, 161, 103);
+  max-width: fit-content;
+  margin:0 auto;
+  margin-top: 10%;
 }
 .scoreboard{
   grid-area: scoreboard;
-  color: rgb(113, 6, 39);
+  color: rgb(77, 161, 103);
   background: rgb(6, 7, 14);
   display: flex;
   flex-direction: column;
@@ -50,7 +67,7 @@ ul{
 .score{
   background-color: rgb(234, 196, 53);
   font-size: small;
-  border: rgb(113, 6, 39) solid 2px;
+  border: rgb(77, 161, 103) solid 2px;
 
 }
 
@@ -58,7 +75,7 @@ ul{
 
 .dice-container{
   grid-area: dice-container;
-  color:rgb(113, 6, 39);
+  color:rgb(77, 161, 103);
   background: rgb(6, 7, 14);
   display: grid;
   grid-template-columns:50% 50%;
@@ -71,9 +88,6 @@ ul{
   text-align: center;
   padding: 10px;
   border: solid rgb(234, 196, 53);
-
-
-
 }
 
 .dice{
@@ -83,7 +97,7 @@ ul{
   text-align: center;
   margin: 0 auto;
   border-radius: 5px;
-  border: rgb(113, 6, 39) solid 2px;
+  border: rgb(77, 161, 103) solid 2px;
   background: rgb(234, 196, 53);
   padding: 5px; 
   font-weight: bold;
@@ -117,9 +131,9 @@ ul{
 
 
 button{
-  border: rgb(113, 6, 39) solid 3px;
+  border: rgb(77, 161, 103) solid 3px;
   background: black;
-  color: rgb(113, 6, 39);
+  color: rgb(77, 161, 103);
   padding:10px;
   font-size: 19px;
   border-radius: 15px;
@@ -135,6 +149,7 @@ grid-area: button;
   color: rgb(234, 196, 53);
   border: solid rgb(234, 196, 53);
   font-size: x-small;
+  padding: 30px;
 }
 .discarded-dice-title{
   background: rgb(234, 196, 53);
@@ -142,22 +157,22 @@ grid-area: button;
   margin-top:4px;
   max-width: fit-content;
   padding: 3px;
-  color:rgb(113, 6, 39);
-  border: rgb(113, 6, 39) solid 2px;
+  color:rgb(77, 161, 103);
+  border: rgb(77, 161, 103) solid 2px;
 }
 
 
 .discarded-dice{
   font-size: x-large;
-  color: rgb(113, 6, 39);
+  color: rgb(77, 161, 103);
   background: rgb(234, 196, 53);
   border-radius: 5px;
-  border: rgb(113, 6, 39) solid 2px;
+  border: rgb(77, 161, 103) solid 2px;
   height: 20px;
   width: 20px;
-
   text-align: center;
   margin: 0 auto;
+  margin-top: 5px;
   border-radius: 5px;
   padding: 5px; 
 }

@@ -26,6 +26,14 @@
 - [X] When both players dice have been discarded, the game ends and the scores are compared.
 - [x] Winner is determined by highest score.
 - [x] Once scores are compared, render win message    
+---
+Languages Used
+
+* [Bootstrap](https://getbootstrap.com)
+* [CSS](https://www.w3.org/TR/CSS/#css)
+* [HTML](https://html.spec.whatwg.org)
+* [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+
 ---  
 ## **Game Screenshots:** 
   I'm not yet satisfied with the presentation. These images represent the current look, but not the final look. 

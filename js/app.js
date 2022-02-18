@@ -156,9 +156,9 @@ rollBtn.textContent = "reset"
 
 function render(){
   if (currentPlayer == 1){
-    statusMessage.textContent = 'player 1 roll'
+    statusMessage.textContent = "Player 1's roll"
 }else if (currentPlayer == -1){
-  statusMessage.textContent = 'player 2 roll'
+  statusMessage.textContent = "Player 2's roll"
 }
   
   d1.textContent = diceInPlay[(diceInPlay.length - 5)]
