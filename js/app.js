@@ -44,6 +44,7 @@ function init(){
   currentPlayer = 1
   playerOneScore = 0
   playerTwoScore = 0
+  isWinner = false
 
 
 }
@@ -90,7 +91,7 @@ function handleTurn(){
   {(currentPlayer = -1) && playerInit()}
    if(currentPlayer == 1 ){htmlBody.style.background = 'rgb(238, 108, 77)'}
   else if (currentPlayer == -1){htmlBody.style.background = 'rgb(0, 121, 140)' }
-  
+  rollBtn.textContent = "Roll"
   endGame()
 }
 
@@ -137,14 +138,16 @@ function endGame(){
 
 
 function getWinner(){
-  
+  isWinner = true
 
   if(playerOneScore > playerTwoScore){(statusMessage.textContent = 'player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
   }else if( playerTwoScore> playerOneScore){(statusMessage.textContent = 'player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
   }else if (playerOneScore == playerTwoScore){statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')}
 
 
-  rollBtn.textContent = "reset"
+rollBtn.textContent = "reset"
+ 
+
   init()
 
   
@@ -194,6 +197,4 @@ if (d5.textContent == 0){
 
  }
 
-function buttonChange(){
-//on gameover, change the roll button to a reset button 
-}    
+  
