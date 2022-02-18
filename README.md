@@ -29,7 +29,6 @@
 ---
 Languages Used
 
-* [Bootstrap](https://getbootstrap.com)
 * [CSS](https://www.w3.org/TR/CSS/#css)
 * [HTML](https://html.spec.whatwg.org)
 * [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
