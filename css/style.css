@@ -14,6 +14,7 @@ body{
   margin: 0 auto;
   margin-top: 10vh;
   animation: flicker 4.5s infinite alternate;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
   
 }
@@ -54,6 +55,7 @@ ul{
   max-width: fit-content;
   margin:0 auto;
   margin-top: 10%;
+  border: rgb(77, 161, 103) solid 2px;
 }
 .scoreboard{
   grid-area: scoreboard;

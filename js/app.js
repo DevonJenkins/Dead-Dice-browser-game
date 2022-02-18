@@ -168,8 +168,8 @@ function render(){
   d5.textContent = diceInPlay[(diceInPlay.length - 1)]
   
   
-  p1ScoreDisplay.textContent = 'P1 score: ' + playerOneScore
-  p2ScoreDisplay.textContent = 'p2 score: ' + playerTwoScore
+  p1ScoreDisplay.textContent = 'P1 Score: ' + playerOneScore
+  p2ScoreDisplay.textContent = 'P2 Score: ' + playerTwoScore
 
   discardedDiceDisplay.textContent =  discardedDice.length
   pipRender()
