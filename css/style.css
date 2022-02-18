@@ -24,7 +24,7 @@ ul{
 }
 .title-container{
   grid-area: title;
-  background: rgb(6, 7, 14);
+  background: rgb(0, 61, 91);
   color: rgb(234, 196, 53);
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ ul{
 
 .status-message-container{
   grid-area: status-message-container;
-  background: rgb(6, 7, 14);
+  background: rgb(0, 61, 91);
   color: rgb(234, 196, 53);
   border: solid rgb(234, 196, 53);
   
@@ -60,7 +60,7 @@ ul{
 .scoreboard{
   grid-area: scoreboard;
   color: rgb(77, 161, 103);
-  background: rgb(6, 7, 14);
+  background: rgb(0, 61, 91);
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -80,7 +80,7 @@ ul{
 .dice-container{
   grid-area: dice-container;
   color:rgb(77, 161, 103);
-  background: rgb(6, 7, 14);
+  background: rgb(0, 61, 91);
   display: grid;
   grid-template-columns:50% 50%;
   grid-template-rows:25% 25% 25% 25%;
@@ -136,7 +136,7 @@ ul{
 
 button{
   border: rgb(77, 161, 103) solid 3px;
-  background: black;
+  background: rgb(234, 196, 53);
   color: rgb(77, 161, 103);
   padding:10px;
   font-size: 19px;
@@ -149,7 +149,7 @@ grid-area: button;
 
 .discarded-dice-container{
   grid-area: discarded-dice-container;
-  background: rgb(6, 7, 14);
+  background: rgb(0, 61, 91);
   color: rgb(234, 196, 53);
   border: solid rgb(234, 196, 53);
   font-size: x-small;
@@ -185,28 +185,15 @@ button:active{
   background: orange;
   color:rgb(234, 196, 53);
 }     
+
+
+@media only screen and (min-width: 768px){
+
 button:hover{
   cursor: pointer;
+  color: rgb(234, 196, 53);
+  background: rgb(77, 161, 103);
+  border: rgb(234, 196, 53) solid 3px;
 }
 
-/* Flickering animation */
-/* @keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
-  
-  }
-  
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
-} */
+}
