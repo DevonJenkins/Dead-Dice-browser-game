@@ -18,14 +18,14 @@
 
 ---
 ## **Game Requirements:**
-- [x] On loading, a blank gameboard is initialized, and the status message informs the user that it is player one's turn.
-- [x] During player one's turn, the player is able to click the roll button to roll their five dice.  
-- [x] As the dice are rolled, any twos and fives get discarded into a separate dice container. The remaining dice on every roll should then contribute towards the current player's score. 
-- [x] Once player one has rolled all five of their dice, player two gets to play their turn.
-- [x] Player two should be able to roll their five dice to contribute to the score until all of their dice have been discarded. 
-- [X] When both players dice have been discarded, the game ends and the scores are compared.
-- [x] Winner is determined by highest score.
-- [x] Once scores are compared, render win message    
+- On loading, a blank gameboard is initialized, and the status message informs the user that it is player one's turn.
+- During player one's turn, the player is able to click the roll button to roll their five dice.  
+- As the dice are rolled, any twos and fives get discarded into a separate dice container. The remaining dice on every roll should then contribute towards the current player's score. 
+- Once player one has rolled all five of their dice, player two gets to play their turn.
+- Player two should be able to roll their five dice to contribute to the score until all of their dice have been discarded. 
+- When both players dice have been discarded, the game ends and the scores are compared.
+- Winner is determined by highest score.
+- Once scores are compared, render win message    
 ---
 Languages Used
 
@@ -51,10 +51,10 @@ Languages Used
 ![game prototype image](https://i.imgur.com/cTybl7T.png)
 
 ---
-## **~~Attributions~~**
+<!-- ## **~~Attributions~~**
  ~~no attributions yet. Leaving this field here for use in the future.~~ 
 
-----
+---- -->
 ### **Stretch Goals:**
 ### Not in order of priority
 
@@ -63,13 +63,9 @@ Languages Used
 - [ ] Add timer to win message
 - [ ] add confetti to win message 
 - [ ] add sound to win message
-
 - [ ] make end of game/winner more apparent
-
 - [ ] Replace the numbers on the dice with pips 
-  
 - [ ] make the dice look like their rolling 
-  
 - [ ] add wild west theme 
 - [ ] add sounds and music in order to supplement the wild west theme
 - [ ] add old west whistle sound on start up

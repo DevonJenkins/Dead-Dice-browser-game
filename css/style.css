@@ -8,7 +8,6 @@ body{
                       "discarded-dice-container dice-container" ;
   text-align: center;
   min-height: 75vh;
-
   width: 75%;
   max-height: 75%; 
   margin: 0 auto;
@@ -46,8 +45,6 @@ ul{
   background: rgb(0, 61, 91);
   color: rgb(234, 196, 53);
   border: solid rgb(234, 196, 53);
-  
-  
 }
 .status-message{
   background: rgb(234, 196, 53);
@@ -72,7 +69,6 @@ ul{
   background-color: rgb(234, 196, 53);
   font-size: small;
   border: rgb(77, 161, 103) solid 2px;
-
 }
 
 
@@ -97,7 +93,6 @@ ul{
 .dice{
   height: 20px;
   width: 20px;
-
   text-align: center;
   margin: 0 auto;
   border-radius: 5px;
@@ -105,8 +100,6 @@ ul{
   background: rgb(234, 196, 53);
   padding: 5px; 
   font-weight: bold;
-
-
   display: flex;
   flex-direction: column;
 }
@@ -142,8 +135,8 @@ button{
   font-size: 19px;
   border-radius: 15px;
   max-width: fit-content;
-margin: 0 auto;
-grid-area: button;
+  margin: 0 auto;
+  grid-area: button;
   
 }
 
