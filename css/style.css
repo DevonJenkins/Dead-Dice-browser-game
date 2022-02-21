@@ -80,10 +80,10 @@ ul{
   display: grid;
   grid-template-columns:50% 50%;
   grid-template-rows:25% 25% 25% 25%;
-  grid-template-areas: "d1 d2 "
+  grid-template-areas:  "d1 d2 "
                         "d3 d3"
                         "d4 d5"
-                        "button button";
+                    "button button";
   align-items: center;
   text-align: center;
   padding: 10px;
@@ -182,11 +182,11 @@ button:active{
 
 @media only screen and (min-width: 768px){
 
-button:hover{
-  cursor: pointer;
-  color: rgb(234, 196, 53);
-  background: rgb(77, 161, 103);
-  border: rgb(234, 196, 53) solid 3px;
-}
+  button:hover{
+    cursor: pointer;
+    color: rgb(234, 196, 53);
+    background: rgb(77, 161, 103);
+    border: rgb(234, 196, 53) solid 3px;
+  }
 
 }

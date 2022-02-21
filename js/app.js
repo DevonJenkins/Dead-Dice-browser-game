@@ -44,6 +44,7 @@ function init(){
   playerTwoScore = 0
   isWinner = false
 }
+
 function handleClick(){
   diceInPlay = [0,0,0,0,0]
 
@@ -78,12 +79,10 @@ function handleTurn(){
 
 
 function playerInit(){
-    diceInPlay = []
-    discardedDice = [] 
-    diceKept = []
-
+  diceInPlay = []
+  discardedDice = [] 
+  diceKept = []
 }
-
 
 
 function countScore(){
@@ -96,28 +95,39 @@ function countScore(){
   }
 }
 
+
 function endGame(){ 
   if ( (currentPlayer == -1) && discardedDice.length ==5){
     getWinner()
   }
 }
+
+
 function getWinner(){
   isWinner = true
-  if(playerOneScore > playerTwoScore){(statusMessage.textContent = 'player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
-  }else if( playerTwoScore> playerOneScore){(statusMessage.textContent = 'player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
-  }else if (playerOneScore == playerTwoScore){statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')}
+
+  if(playerOneScore > playerTwoScore){
+      (statusMessage.textContent = 'player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
+
+  }else if( playerTwoScore> playerOneScore){
+      (statusMessage.textContent = 'player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
+
+  }else if (playerOneScore == playerTwoScore){
+      statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')}
 
   rollBtn.textContent = "reset"
 
   init()
 }
 
+
 function render(){
   if (currentPlayer == 1){
     statusMessage.textContent = "Player 1's roll"
-}else if (currentPlayer == -1){
-  statusMessage.textContent = "Player 2's roll"
+  }else if (currentPlayer == -1){
+    statusMessage.textContent = "Player 2's roll"
 }
+
   d1.textContent = diceInPlay[(diceInPlay.length - 5)]
   d2.textContent = diceInPlay[(diceInPlay.length - 4)]
   d3.textContent = diceInPlay[(diceInPlay.length - 3)]
@@ -131,23 +141,24 @@ function render(){
   pipRender()
 }
 
+
 function pipRender(){
 
-if (d1.textContent == 0){
-  (d1.textContent = '')
-} 
-if (d2.textContent == 0){
-  (d2.textContent = '')
-} 
-if (d3.textContent == 0){
-  (d3.textContent = '')
-} 
-if (d4.textContent == 0){
-  (d4.textContent = '')
-} 
-if (d5.textContent == 0){
-  (d5.textContent = '')
-} 
-  }
+  if (d1.textContent == 0){
+    (d1.textContent = '')
+  } 
+  if (d2.textContent == 0){
+    (d2.textContent = '')
+  } 
+  if (d3.textContent == 0){
+    (d3.textContent = '')
+  } 
+  if (d4.textContent == 0){
+    (d4.textContent = '')
+  } 
+  if (d5.textContent == 0){
+    (d5.textContent = '')
+  } 
+}
 
   
