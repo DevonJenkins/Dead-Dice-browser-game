@@ -17,6 +17,7 @@ statusMessage = document.querySelector('.status-message')
 p1ScoreDisplay = document.querySelector('#player-one-score')
 p2ScoreDisplay = document.querySelector('#player-two-score')
 htmlBody = document.querySelector('body')
+dice = document.querySelectorAll('.dice')
 
 d1 = document.querySelector('#d1')
 d2 = document.querySelector('#d2')
@@ -55,6 +56,8 @@ function handleClick(){
     }else{ diceKept.push(die)} 
     })
 
+  rollBtn.textContent = "Roll" 
+
   render()
   handleTurn()
   countScore()
@@ -70,10 +73,7 @@ function rollDice(min, max){
 function handleTurn(){
   if  ((discardedDice.length == 5)&&(currentPlayer == 1))
   {(currentPlayer = -1) && playerInit()}
-
-  if(currentPlayer == 1 ){htmlBody.style.background = 'rgb(238, 108, 77)'}
-  else if (currentPlayer == -1){htmlBody.style.background = 'rgb(0, 121, 140)' }
-  rollBtn.textContent = "Roll"
+  
   endGame()
 }
 
@@ -128,11 +128,18 @@ function render(){
     statusMessage.textContent = "Player 2's roll"
 }
 
+  if(currentPlayer == 1 )
+    {htmlBody.style.background = 'rgb(238, 108, 77)'}
+  else if (currentPlayer == -1)         
+    {htmlBody.style.background = 'rgb(0, 121, 140)' 
+  }
+
   d1.textContent = diceInPlay[(diceInPlay.length - 5)]
   d2.textContent = diceInPlay[(diceInPlay.length - 4)]
   d3.textContent = diceInPlay[(diceInPlay.length - 3)]
   d4.textContent = diceInPlay[(diceInPlay.length - 2)]
   d5.textContent = diceInPlay[(diceInPlay.length - 1)]
+  
   
   p1ScoreDisplay.textContent = 'P1 Score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'P2 Score: ' + playerTwoScore
@@ -143,6 +150,10 @@ function render(){
 
 
 function pipRender(){
+//Try using forEach here. For Each dice, if text content == 0, then text content == ' '
+  //better yet, if the for each works try adding pips by using innerHTML and/or .style 
+
+//can I remove discarded dice from the screen entirely? Is there really any reason to display how many dice have been discarded? 
 
   if (d1.textContent == 0){
     (d1.textContent = '')
@@ -159,6 +170,14 @@ function pipRender(){
   if (d5.textContent == 0){
     (d5.textContent = '')
   } 
+  
+  // dice.forEach(function(dice){
+  //   if (dice.textContent == 0){
+  //     dice.textContent == ''
+  //   }
+  // })
+
+
 }
 
   
