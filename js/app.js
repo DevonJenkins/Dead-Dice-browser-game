@@ -156,8 +156,13 @@ function pipRender(){
 //can I remove discarded dice from the screen entirely? Is there really any reason to display how many dice have been discarded? 
 
   if (d1.textContent == 0){
-    (d1.textContent = '')
-  } 
+    (d1.textContent = ' ') 
+  }
+
+  console.log(d1.textContent)
+
+
+
   if (d2.textContent == 0){
     (d2.textContent = '')
   } 
