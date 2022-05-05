@@ -9,10 +9,10 @@
 ---
 
 ### **Instructions:**
-    1. The goal of the game is to win by accumulating more points than your opponent by the end of the game.
-    2. Accumulate points by rolling your five dice, but watch out! If any of your dice land on a two or a five, they are then discarded and can no longer be rolled. 
-    3. Each players turn lasts until all of their dice are discarded. 
-    4. Once both players turns are over, the scores are compared, and the player with highest score wins the game. 
+  1. The goal of the game is to win by accumulating more points than your opponent by the end of the game.
+  2. Accumulate points by rolling your five dice, but watch out! If any of your dice land on a two or a five, they are then discarded and can no longer be rolled. 
+  3. Each players turn lasts until all of their dice are discarded. 
+  4. Once both players turns are over, the scores are compared, and the player with highest score wins the game. 
 
 ## **[Click here to play Dead Dice](https://devonjenkins.github.io/Dead-Dice-browser-game/)**
 
@@ -29,9 +29,9 @@
 ---
 Languages Used
 
-* [CSS](https://www.w3.org/TR/CSS/#css)
-* [HTML](https://html.spec.whatwg.org)
-* [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- CSS
+- HTML
+- JavaScript
 
 ---  
 ## **Game Screenshots:** 
@@ -51,10 +51,7 @@ Languages Used
 ![game prototype image](https://i.imgur.com/cTybl7T.png)
 
 ---
-<!-- ## **~~Attributions~~**
- ~~no attributions yet. Leaving this field here for use in the future.~~ 
 
----- -->
 ### **Stretch Goals:**
 ### Not in order of priority
 

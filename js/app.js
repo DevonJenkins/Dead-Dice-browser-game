@@ -3,7 +3,7 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let diceInPlay = [0,0,0,0,0]
+let diceInPlay = []
 let diceKept = [] 
 let discardedDice = []
 let currentPlayer = null
@@ -37,7 +37,7 @@ render()
 
 
 function init(){
-  diceInPlay = [0,0,0,0,0]
+  diceInPlay = []
   diceKept = []
   discardedDice = []
   currentPlayer = 1
@@ -47,7 +47,7 @@ function init(){
 }
 
 function handleClick(){
-  diceInPlay = [0,0,0,0,0]
+  diceInPlay = []
 
   for (let i=1; i <= (5 - (discardedDice.length)); i++) diceInPlay.push(rollDice(i))
 
@@ -108,15 +108,15 @@ function getWinner(){
   isWinner = true
 
   if(playerOneScore > playerTwoScore){
-      (statusMessage.textContent = 'player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
+      (statusMessage.textContent = 'Player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
       && (statusMessage.style.color = 'rgb(238, 108, 77)')
 
   }else if( playerTwoScore> playerOneScore){
-      (statusMessage.textContent = 'player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
+      (statusMessage.textContent = 'Player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
       && (statusMessage.style.color = 'rgb(0, 121, 140)')
       
     }else if (playerOneScore == playerTwoScore){
-      statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')
+      statusMessage.textContent =( 'Its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')
       && (statusMessage.style.color = 'rgb(48, 99, 142)')
     }
       
@@ -141,12 +141,16 @@ function render(){
   && (statusMessage.style.color = 'rgb(0, 121, 140)')
   }
 
+  // diceInPlay.forEach((die) => {
+  //     console.log(die)
+  //     die.textContent = 0
+  // })
+
   d1.textContent = diceInPlay[(diceInPlay.length - 5)]
   d2.textContent = diceInPlay[(diceInPlay.length - 4)]
   d3.textContent = diceInPlay[(diceInPlay.length - 3)]
   d4.textContent = diceInPlay[(diceInPlay.length - 2)]
   d5.textContent = diceInPlay[(diceInPlay.length - 1)]
-  
   
   p1ScoreDisplay.textContent = 'P1 Score: ' + playerOneScore
   p2ScoreDisplay.textContent = 'P2 Score: ' + playerTwoScore
@@ -164,7 +168,7 @@ function pipRender(){
 //can I remove discarded dice from the screen entirely? Is there really any reason to display how many dice have been discarded? 
 
   if (d1.textContent == 0){
-    (d1.textContent = ' ') 
+    (d1.textContent = '') 
   }
 
   console.log(d1.textContent)

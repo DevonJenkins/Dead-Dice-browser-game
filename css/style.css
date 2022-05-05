@@ -116,6 +116,19 @@ ul{
   flex-direction: column;
 }
 
+.dot {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color:white;
+  }
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
 #d1{
   grid-area: d1;
@@ -189,6 +202,9 @@ button{
   padding: 5px; 
 }
 
+button:hover{
+  cursor: pointer;
+}
 
 button:active{
   background: orange;
@@ -198,7 +214,7 @@ button:active{
 
 @media only screen and (max-width: 768px){
 
-  button:hover{
+  button:active{
     cursor: pointer;
     color: rgb(234, 196, 53);
     background: rgb(77, 161, 103);
