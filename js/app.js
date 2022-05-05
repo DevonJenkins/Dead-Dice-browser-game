@@ -75,6 +75,7 @@ function handleTurn(){
   {(currentPlayer = -1) && playerInit()}
   
   endGame()
+  removeDice()
 }
 
 
@@ -124,13 +125,13 @@ function getWinner(){
 function render(){
   if (currentPlayer == 1){
     statusMessage.textContent = "Player 1's roll"
-  }else if (currentPlayer == -1){
+  } else if (currentPlayer == -1){
     statusMessage.textContent = "Player 2's roll"
-}
+  }
 
   if(currentPlayer == 1 )
-    {htmlBody.style.background = 'rgb(238, 108, 77)'}
-  else if (currentPlayer == -1)         
+    {htmlBody.style.background = 'rgb(238, 108, 77)'
+  } else if (currentPlayer == -1)         
     {htmlBody.style.background = 'rgb(0, 121, 140)' 
   }
 
@@ -152,6 +153,7 @@ function render(){
 function pipRender(){
 //Try using forEach here. For Each dice, if text content == 0, then text content == ' '
   //better yet, if the for each works try adding pips by using innerHTML and/or .style 
+
 
 //can I remove discarded dice from the screen entirely? Is there really any reason to display how many dice have been discarded? 
 
@@ -178,11 +180,23 @@ function pipRender(){
   
   // dice.forEach(function(dice){
   //   if (dice.textContent == 0){
-  //     dice.textContent == ''
+  //     dice.remove()
+  //   } else if(dice.textContent != 0) {
+  //       dice.append()
   //   }
   // })
 
 
 }
 
+function removeDice(){
+  dice.forEach(function(dice){
+    if (dice.textContent == 0){
+      dice.style.display='none';
+    } else if(dice.textContent != 0) {
+      dice.style.display='block';
+          }
+      })
+
+}
   
