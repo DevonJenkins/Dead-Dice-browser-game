@@ -35,13 +35,9 @@ Languages Used
 
 ---  
 ## **Game Screenshots:** 
-  I'm not yet satisfied with the presentation. These images represent the current look, but not the final look. 
 
-
- - On initialization ![On load in/Player one's turn](https://i.imgur.com/0KKdJPm.png)
+  On initialization ![On load in/Player one's turn](https://i.imgur.com/479VtAv.png)
      
-  - Player two's turn begins ![Player two's turn](https://i.imgur.com/WpgHWVX.png)
-- Win screen ![ Win screen](https://i.imgur.com/VNLQY8o.png)
 
 
 
