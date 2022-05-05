@@ -58,7 +58,7 @@ Languages Used
 ### **Stretch Goals:**
 ### Not in order of priority
 
-- [ ] Improve UI/UX by adding a reset button when the game ends. 
+- [x] Improve UI/UX by adding a reset button when the game ends. 
 - [ ] Add timer to dice roll
 - [ ] Add timer to win message
 - [ ] add confetti to win message 
