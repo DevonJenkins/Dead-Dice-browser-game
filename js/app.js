@@ -109,13 +109,17 @@ function getWinner(){
 
   if(playerOneScore > playerTwoScore){
       (statusMessage.textContent = 'player 1 wins') && (htmlBody.style.background = 'rgb(238, 108, 77)')
+      && (statusMessage.style.color = 'rgb(238, 108, 77)')
 
   }else if( playerTwoScore> playerOneScore){
       (statusMessage.textContent = 'player 2 wins') && ( htmlBody.style.background = 'rgb(0, 121, 140)')
-
-  }else if (playerOneScore == playerTwoScore){
-      statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')}
-
+      && (statusMessage.style.color = 'rgb(0, 121, 140)')
+      
+    }else if (playerOneScore == playerTwoScore){
+      statusMessage.textContent =( 'its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')
+      && (statusMessage.style.color = 'rgb(48, 99, 142)')
+    }
+      
   rollBtn.textContent = "reset"
 
   init()
@@ -130,9 +134,11 @@ function render(){
   }
 
   if(currentPlayer == 1 )
-    {htmlBody.style.background = 'rgb(238, 108, 77)'
+    {(htmlBody.style.background = 'rgb(238, 108, 77)')
+    && (statusMessage.style.color = 'rgb(238, 108, 77)')
   } else if (currentPlayer == -1)         
-    {htmlBody.style.background = 'rgb(0, 121, 140)' 
+  {htmlBody.style.background = 'rgb(0, 121, 140)' 
+  && (statusMessage.style.color = 'rgb(0, 121, 140)')
   }
 
   d1.textContent = diceInPlay[(diceInPlay.length - 5)]
