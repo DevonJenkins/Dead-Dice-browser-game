@@ -116,7 +116,7 @@ function getWinner(){
       && (statusMessage.style.color = 'rgb(0, 121, 140)')
       
     }else if (playerOneScore == playerTwoScore){
-      statusMessage.textContent =( 'Its a tie sonny')&&(htmlBody.style.background = 'rgb(48, 99, 142)')
+      (statusMessage.textContent = 'Its a tie sonny') && (htmlBody.style.background = 'rgb(48, 99, 142)')
       && (statusMessage.style.color = 'rgb(48, 99, 142)')
     }
       
@@ -167,36 +167,29 @@ function pipRender(){
 
 //can I remove discarded dice from the screen entirely? Is there really any reason to display how many dice have been discarded? 
 
-  if (d1.textContent == 0){
-    (d1.textContent = '') 
-  }
-
-  console.log(d1.textContent)
-
-
-
-  if (d2.textContent == 0){
-    (d2.textContent = '')
-  } 
-  if (d3.textContent == 0){
-    (d3.textContent = '')
-  } 
-  if (d4.textContent == 0){
-    (d4.textContent = '')
-  } 
-  if (d5.textContent == 0){
-    (d5.textContent = '')
-  } 
-  
-  // dice.forEach(function(dice){
-  //   if (dice.textContent == 0){
-  //     dice.remove()
-  //   } else if(dice.textContent != 0) {
-  //       dice.append()
-  //   }
-  // })
-
-
+  dice.forEach(function(die){
+    if(die.textContent == 0){
+      die.textContent = ''
+    }
+    if(die.textContent == '1'){
+      die.innerHTML = '<h1 class="dot">&#x2680</h1>'
+    }
+    if(die.textContent == '2'){
+      die.innerHTML = '<h1 class="dot">&#x2681</h1>'
+    }
+    if(die.textContent == '3'){
+      die.innerHTML = '<h1 class="dot">&#x2682</h1>'
+    }
+    if(die.textContent == '4'){
+      die.innerHTML = '<h1 class="dot">&#x2683</h1>'
+    }
+    if(die.textContent == '5'){
+      die.innerHTML = '<h1 class="dot">&#x2684</h1>'
+    }
+    if(die.textContent == '6'){
+      die.innerHTML = '<h1 class="dot">&#x2685</h1>'
+    }
+  })
 }
 
 function removeDice(){
@@ -207,6 +200,5 @@ function removeDice(){
       dice.style.display='block';
           }
       })
-
 }
   

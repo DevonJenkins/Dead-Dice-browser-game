@@ -108,20 +108,25 @@ ul{
   text-align: center;
   margin: 0 auto;
   border-radius: 5px;
-  border: rgb(77, 161, 103) solid 2px;
-  background: rgb(234, 196, 53);
+  /* border: rgb(77, 161, 103) solid 2px;
+  background: rgb(234, 196, 53); */
   padding: 5px; 
   font-weight: bold;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .dot {
   display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color:white;
+  color:yellow;
+  /* width: 4px;
+  height: 4px; */
+  /* border-radius: 50%; */
+  /* background-color:white; */
+  margin: 0 auto;
+  
   }
 
 .first-face {
