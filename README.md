@@ -57,8 +57,8 @@ Languages Used
 - [ ] add confetti to win message 
 - [ ] add sound to win message
 - [ ] make end of game/winner more apparent
-- [ ] Replace the numbers on the dice with pips 
-- [ ] make the dice look like their rolling 
+- [x] Replace the numbers on the dice with pips 
+- [ ] make the dice look like they're rolling 
 - [ ] add wild west theme 
 - [ ] add sounds and music in order to supplement the wild west theme
 - [ ] add old west whistle sound on start up
